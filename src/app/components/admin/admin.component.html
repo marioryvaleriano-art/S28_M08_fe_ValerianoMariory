@@ -1,0 +1,47 @@
+<div class="main-bg">
+
+  <div class="admin-card">
+    <h3 class="card-title">{{ editando ? 'Editar Juego del Arsenal' : 'Registrar Nuevo Susto' }}</h3>
+    
+    <div class="input-row">
+      <input type="text" [(ngModel)]="juegoActual.titulo" placeholder="Título" class="input-field">
+      <input type="text" [(ngModel)]="juegoActual.categoria" placeholder="Categoría" class="input-field">
+    </div>
+
+    <input type="text" [(ngModel)]="juegoActual.imagen" placeholder="URL de la imagen" class="input-field" style="width: 100%; margin-bottom: 15px; box-sizing: border-box;">
+
+    <textarea [(ngModel)]="juegoActual.descripcion" placeholder="Descripción..." class="textarea-field"></textarea>
+
+    <div class="action-buttons">
+      <button (click)="guardar()" class="btn-actualizar">
+        {{ editando ? 'ACTUALIZAR' : 'GUARDAR JUEGO' }}
+      </button>
+      <button (click)="limpiar()" class="btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <h3 class="card-title">Arsenal de Juegos Registrados</h3>
+    
+    <table class="dark-table">
+      <thead>
+        <tr>
+          <th>TÍTULO</th>
+          <th>CATEGORÍA</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juego of listaJuegos">
+          <td>{{ juego.titulo }}</td>
+          <td><span class="badge">{{ juego.categoria }}</span></td>
+          <td>
+            <button (click)="prepararEdicion(juego)" class="btn-edit">🖋️ Editar</button>
+            <button (click)="eliminar(juego.id)" class="btn-delete">🗑️ Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

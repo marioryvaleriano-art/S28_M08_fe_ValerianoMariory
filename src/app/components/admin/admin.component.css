@@ -1,0 +1,132 @@
+.main-bg {
+    background-color: #e63946; /* Rojo de fondo */
+    min-height: 100vh;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tarjetas Estilo "Arsenal" */
+.admin-card, .table-card {
+    background-color: #1a1a1a;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Formulario */
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    flex: 1;
+    background-color: #262626;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 6px;
+    color: #eee;
+}
+
+.textarea-field {
+    width: 100%;
+    height: 100px;
+    background-color: #262626;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 6px;
+    color: #eee;
+    margin-bottom: 20px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Botones de Acción Principal */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-actualizar {
+    flex: 4;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    flex: 1;
+    background-color: #333;
+    color: #999;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Tabla de Juegos */
+.dark-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.dark-table th {
+    text-align: left;
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.dark-table td {
+    padding: 15px 0;
+    color: white;
+    border-bottom: 1px solid #222;
+}
+
+/* Etiquetas (Terror) */
+.badge {
+    background-color: #2a1515;
+    color: #ff4d4d;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+/* Botones de la Tabla */
+.btn-edit, .btn-delete {
+    background-color: #262626;
+    color: white;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn-edit:hover { background-color: #333; border-color: #ffc107; }
+.btn-delete:hover { background-color: #333; border-color: #ff4d4d; }
